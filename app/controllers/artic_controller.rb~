@@ -1,0 +1,11 @@
+class ArticController < ApplicationController
+  def new
+   @sample = Sample.new
+  end
+
+  def create 
+   @sample = sample.create(params[:sample])
+   @sample.save
+   flash[:notice] = "Data is created"
+  end
+end
